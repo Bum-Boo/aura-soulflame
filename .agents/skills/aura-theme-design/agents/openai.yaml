@@ -1,0 +1,4 @@
+interface:
+  display_name: "Aura Theme Design"
+  short_description: "Design or apply an Aura Soulflame theme"
+  default_prompt: "Use $aura-theme-design to adapt Aura Soulflame to my current app and show me how to verify and undo it."

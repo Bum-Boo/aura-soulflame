@@ -58,8 +58,10 @@ Linux で Plasma の配色とスプラッシュをまとめて入れる場合は
 
 ## AI アシスタントに適用を頼む
 
-> `AGENTS.md` を読み、私の OS、デスクトップ環境、対象アプリを確認してください。選んだ Aura Soulflame コンポーネントのインストール計画を先に表示し、既存の設定を保ったまま適用してください。アプリで反映を確認し、元に戻す方法も教えてください。任意の素材パックは `<パス>` にあります。
+[aura-theme-design スキル](../.agents/skills/aura-theme-design/SKILL.md)は、新しいテーマの設計、別のアプリへの配色の移植、配布コンポーネントの適用に使えます。Kitty の配色プリセット、CSS 変数の書き出し、コントラストの確認ツールが含まれます。
 
-[AI 向け適用ガイド](apply-with-ai.md) · [モジュール一覧](../modules.json) · [出典とクレジット](credits.md)
+> `$aura-theme-design` を使い、今のデスクトップやアプリに Aura Soulflame を合わせてください。既存設定を保ちながら、まずプレビューを見せてください。反映を確かめる方法と、元に戻す方法も教えてください。任意の素材パックは `<パス>` にあります。
+
+[スキル ZIP をダウンロード](https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip) · [スキルの導入と AI 向け適用ガイド](apply-with-ai.md) · [モジュール一覧](../modules.json) · [出典とクレジット](credits.md) · [MIT ライセンス](../LICENSE)
 
 プレビューは分離した Linux 環境で KDE Plasma 6 と Kitty を実際に動かして撮影しました。インストーラーの動作は `python3 -m unittest discover -s tests -v` で確認できます。

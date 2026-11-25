@@ -58,8 +58,10 @@ python3 aura.py status --modules kitty
 
 ## 让 AI 助手帮忙应用
 
-> 请阅读 `AGENTS.md`，识别我的操作系统、桌面环境和目标应用。先展示我选定的 Aura Soulflame 组件的安装计划，再保留现有设置并应用它们。请在应用中验证效果，并说明如何恢复。可选素材包的路径是 `<路径>`。
+[aura-theme-design 技能](../.agents/skills/aura-theme-design/SKILL.md)可以设计新主题、将 Aura 配色移植到其他应用，或应用仓库提供的组件。技能包内含 Kitty 配色预设、CSS 变量导出工具和对比度检查工具。
 
-[AI 应用指南](apply-with-ai.md) · [组件清单](../modules.json) · [素材来源与致谢](credits.md)
+> 请用 `$aura-theme-design` 为我当前使用的桌面或应用适配 Aura Soulflame。先展示预览并保留现有设置，再说明如何验证和恢复。可选素材包的路径是 `<路径>`。
+
+[下载技能 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip) · [技能安装和 AI 应用指南](apply-with-ai.md) · [组件清单](../modules.json) · [来源与致谢](credits.md) · [MIT 许可证](../LICENSE)
 
 预览是在隔离的 Linux 环境中实际运行 KDE Plasma 6 和 Kitty 后录制的。使用 `python3 -m unittest discover -s tests -v` 可以检查安装工具的行为。

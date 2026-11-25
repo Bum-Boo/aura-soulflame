@@ -58,8 +58,10 @@ Linux에서 KDE 색과 시작 화면을 함께 쓰려면 같은 명령에서 `--
 
 ## AI에 적용을 맡기기
 
-> `AGENTS.md`를 읽고 내 운영체제, 데스크톱, 대상 앱을 확인해 줘. 내가 고른 Aura Soulflame 구성의 설치 미리보기를 보여 주고, 기존 설정을 보존하면서 적용해 줘. 앱에서 적용 여부를 확인하고 되돌리는 방법도 알려 줘. 내 에셋 팩 경로는 `<경로>`야.
+[aura-theme-design 스킬](../.agents/skills/aura-theme-design/SKILL.md)을 쓰면 새 테마를 디자인하거나, Aura 색을 다른 앱에 옮기거나, 배포된 구성을 적용할 수 있어요. Kitty 프리셋, CSS 변수 내보내기, 대비 검사 도구도 들어 있어요.
 
-[AI 적용 가이드](apply-with-ai.md) · [모듈 목록](../modules.json) · [출처와 크레딧](credits.md)
+> `$aura-theme-design`으로 지금 쓰는 데스크톱이나 앱에 Aura Soulflame을 맞춰 줘. 기존 설정을 보존하면서 미리보기를 먼저 보여 줘. 적용 결과를 확인하고 되돌리는 방법도 알려 줘. 내 에셋 팩 경로는 `<경로>`야.
+
+[스킬 ZIP 다운로드](https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip) · [스킬 설치와 AI 적용 가이드](apply-with-ai.md) · [모듈 목록](../modules.json) · [출처와 크레딧](credits.md) · [MIT 라이선스](../LICENSE)
 
 미리보기는 격리된 Linux 환경에서 KDE Plasma 6과 Kitty를 실행해 촬영했어요. 설치 도구는 `python3 -m unittest discover -s tests -v`로 점검할 수 있어요.

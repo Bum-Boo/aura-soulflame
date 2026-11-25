@@ -58,8 +58,10 @@ To switch back, first select your previous theme or remove the Kitty include. Th
 
 ## Apply with an AI assistant
 
-> Read `AGENTS.md` and detect my OS, desktop, and target app. Show me an Aura Soulflame plan for the components I choose. Apply them while preserving my existing settings, check the result in the app, and show me how to undo it. My optional asset pack is at `<path>`.
+The [`aura-theme-design` skill](.agents/skills/aura-theme-design/SKILL.md) can design a new theme, port the Aura palette to an existing app, or apply the packaged modules. It includes a standalone Kitty preset, a CSS variable exporter, and a contrast checker.
 
-[AI application guide](docs/apply-with-ai.md) · [Module catalog](modules.json) · [Credits and provenance](docs/credits.md)
+> Use `$aura-theme-design` to adapt Aura Soulflame to my current desktop or app. Show a preview first, preserve my existing settings, and explain how to verify and undo the result. My optional asset pack is at `<path>`.
+
+[Download the skill ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip) · [Installation and AI application guide](docs/apply-with-ai.md) · [Module catalog](modules.json) · [Credits](docs/credits.md) · [MIT license](LICENSE)
 
 The previews show the theme running on KDE Plasma 6 and Kitty in an isolated Linux session. Run `python3 -m unittest discover -s tests -v` to check installer behavior.
