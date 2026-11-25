@@ -1,0 +1,14 @@
+{
+  "KPackageStructure": "Plasma/Wallpaper",
+  "KPlugin": {
+    "Id": "io.github.bum_boo.soulflame.lock",
+    "Name": "Aura Soulflame Night",
+    "Description": "Plasma 6 wallpaper with a calm flame scene",
+    "Version": "0.1.0",
+    "Authors": [
+      {
+        "Name": "Bum-Boo"
+      }
+    ]
+  }
+}

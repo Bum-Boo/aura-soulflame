@@ -1,0 +1,14 @@
+{
+  "KPackageStructure": "Plasma/LookAndFeel",
+  "KPlugin": {
+    "Id": "io.github.bum_boo.soulflame.splash",
+    "Name": "Aura Soulflame Splash",
+    "Description": "Plasma 6 animated login splash",
+    "Version": "0.1.0",
+    "Authors": [
+      {
+        "Name": "Bum-Boo"
+      }
+    ]
+  }
+}

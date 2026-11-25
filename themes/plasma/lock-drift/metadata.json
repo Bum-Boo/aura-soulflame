@@ -1,0 +1,14 @@
+{
+  "KPackageStructure": "Plasma/Wallpaper",
+  "KPlugin": {
+    "Id": "io.github.bum_boo.soulflame.drift",
+    "Name": "Aura Soulflame Drift",
+    "Description": "Plasma 6 drifting embers over a gradient or image",
+    "Version": "0.1.0",
+    "Authors": [
+      {
+        "Name": "Bum-Boo"
+      }
+    ]
+  }
+}

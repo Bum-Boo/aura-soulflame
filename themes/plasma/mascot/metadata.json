@@ -1,0 +1,17 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": {
+    "Id": "io.github.bum_boo.soulflame.panel",
+    "Name": "Aura Soulflame Panel",
+    "Description": "Plasma 6 panel flame or optional character mascot",
+    "Version": "0.1.0",
+    "Category": "Fun and Games",
+    "Icon": "face-cool",
+    "Authors": [
+      {
+        "Name": "Bum-Boo"
+      }
+    ]
+  },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}

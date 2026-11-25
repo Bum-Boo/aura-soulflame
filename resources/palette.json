@@ -1,0 +1,24 @@
+{
+  "name": "Aura Soulflame",
+  "colors": {
+    "background": "#2B2235",
+    "window": "#38253E",
+    "surface": "#472746",
+    "navy": "#30304C",
+    "foreground": "#FFF2E5",
+    "muted": "#DBC5D6",
+    "accent": "#F46DA9",
+    "selection": "#9C246A",
+    "mint": "#90E9D7",
+    "gold": "#E7AA36",
+    "error": "#F88B95",
+    "success": "#A1D7A6",
+    "visited": "#B7A8EC"
+  },
+  "ansi": [
+    "#25243F", "#F88B95", "#A1D7A6", "#E7AA36",
+    "#B7A8EC", "#F46DA9", "#90E9D7", "#DCD0DE",
+    "#9A91AF", "#FFABB4", "#BDE9BF", "#FFD17E",
+    "#D4C5FB", "#FFA4CE", "#B0F5E8", "#FFF2E5"
+  ]
+}

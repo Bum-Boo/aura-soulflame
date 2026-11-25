@@ -1,0 +1,108 @@
+{
+  "version": "0.1.0",
+  "modules": {
+    "kitty": {
+      "description": "Kitty color preset",
+      "platforms": [
+        "linux",
+        "darwin"
+      ],
+      "root": "kitty",
+      "target": "aura-soulflame.conf",
+      "source": "themes/kitty/aura-soulflame.conf"
+    },
+    "plasma-colors": {
+      "description": "KDE Plasma color scheme",
+      "platforms": [
+        "linux"
+      ],
+      "root": "data",
+      "target": "color-schemes/AuraSoulflamePortable.colors",
+      "source": "themes/plasma/AuraSoulflamePortable.colors"
+    },
+    "plasma-splash": {
+      "description": "Plasma 6 animated login splash",
+      "platforms": [
+        "linux"
+      ],
+      "root": "data",
+      "target": "plasma/look-and-feel/io.github.bum_boo.soulflame.splash",
+      "source": "themes/plasma/startup",
+      "shared": "contents/splash",
+      "portraits": [
+        "awake",
+        "sleep"
+      ]
+    },
+    "plasma-lock": {
+      "description": "Plasma 6 wallpaper with a calm flame scene",
+      "platforms": [
+        "linux"
+      ],
+      "root": "data",
+      "target": "plasma/wallpapers/io.github.bum_boo.soulflame.lock",
+      "source": "themes/plasma/lock",
+      "shared": "contents/ui",
+      "portraits": [
+        "awake",
+        "sleep"
+      ]
+    },
+    "plasma-drift": {
+      "description": "Plasma 6 drifting embers over a gradient or image",
+      "platforms": [
+        "linux"
+      ],
+      "root": "data",
+      "target": "plasma/wallpapers/io.github.bum_boo.soulflame.drift",
+      "source": "themes/plasma/lock-drift"
+    },
+    "plasma-panel": {
+      "description": "Plasma 6 panel flame or optional character mascot",
+      "platforms": [
+        "linux"
+      ],
+      "root": "data",
+      "target": "plasma/plasmoids/io.github.bum_boo.soulflame.panel",
+      "source": "themes/plasma/mascot",
+      "shared": "contents/ui",
+      "portraits": [
+        "awake",
+        "lean",
+        "look-left",
+        "look-right"
+      ]
+    },
+    "cursor": {
+      "description": "User-supplied Xcursor theme directory",
+      "platforms": [
+        "linux"
+      ],
+      "root": "data",
+      "target": "icons/AuraSoulflameCursor",
+      "pack": "cursor"
+    },
+    "wallpapers": {
+      "description": "User-supplied static wallpaper images",
+      "platforms": [
+        "linux",
+        "darwin",
+        "win32"
+      ],
+      "root": "data",
+      "target": "wallpapers/AuraSoulflame",
+      "pack": "wallpapers"
+    },
+    "codex-pet": {
+      "description": "User-supplied custom Codex pet",
+      "platforms": [
+        "linux",
+        "darwin",
+        "win32"
+      ],
+      "root": "codex",
+      "target": "pets",
+      "pack": "pet"
+    }
+  }
+}
