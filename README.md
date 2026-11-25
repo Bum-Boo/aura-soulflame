@@ -1,6 +1,8 @@
-# Aura Soulflame
+# ![Aura Soulflame](docs/media/readme-header.png)
 
 **English** · [한국어](docs/README.ko.md) · [简体中文](docs/README.zh-CN.md) · [日本語](docs/README.ja.md)
+
+[Install the theme](#theme-setup) · [Install the AI skill](#agent-skill)
 
 A desktop theme built around plum backgrounds, pink selection, and mint flames. Pick individual Plasma effects or the Kitty palette, then bring your own wallpapers, cursors, or Codex pet if you want them.
 
@@ -41,7 +43,16 @@ To turn on the splash, choose **Aura Soulflame Splash** in System Settings → S
 
 See the [asset pack layout](docs/assets.md) for file names and `--assets` examples. For another terminal or desktop, map the roles and 16 ANSI colors in [palette.json](resources/palette.json) to its native theme format.
 
+<a name="theme-setup"></a>
+
 ## Install and apply
+
+Clone the repository, or download the [full theme ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.1.0/aura-soulflame-v0.1.0.zip) and open the extracted folder.
+
+```sh
+git clone https://github.com/Bum-Boo/aura-soulflame.git
+cd aura-soulflame
+```
 
 Run these commands from the repository root with **Python 3.9 or newer**. The Kitty example is for Linux or macOS. Plasma modules require KDE Plasma 6 on Linux. On Windows, use `py -3 aura.py` for local wallpapers or a Codex pet.
 
@@ -56,12 +67,82 @@ On Linux, use the same sequence with `--modules plasma-colors plasma-splash` to 
 
 To switch back, first select your previous theme or remove the Kitty include. Then run `python3 aura.py uninstall --modules kitty`, using the modules you installed. If you edited an installed file, the installer reports `modified` and keeps it in place.
 
-## Apply with an AI assistant
+<a name="agent-skill"></a>
 
-The [`aura-theme-design` skill](.agents/skills/aura-theme-design/SKILL.md) can design a new theme, port the Aura palette to an existing app, or apply the packaged modules. It includes a standalone Kitty preset, a CSS variable exporter, and a contrast checker.
+## ![Aura Theme Design](docs/media/agent-skill-header.png)
 
-> Use `$aura-theme-design` to adapt Aura Soulflame to my current desktop or app. Show a preview first, preserve my existing settings, and explain how to verify and undo the result. My optional asset pack is at `<path>`.
+Use the skill to design an Aura theme, port the palette to another app, or apply the KDE and Kitty modules. It carries the palette, Kitty preset, CSS exporter, and contrast checker. [Download the skill ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip) · [Read the skill](.agents/skills/aura-theme-design/SKILL.md)
 
-[Download the skill ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip) · [Installation and AI application guide](docs/apply-with-ai.md) · [Module catalog](modules.json) · [Credits](docs/credits.md) · [MIT license](LICENSE)
+### 1. Choose your agent
+
+Open this checkout directly if your agent discovers `.agents/skills/`. For reuse in other projects, extract `aura-theme-design/` into **one** of the locations below. The destination should contain `aura-theme-design/SKILL.md`.
+
+| Agent | User-wide folder | Project-only folder | How to invoke |
+| --- | --- | --- | --- |
+| Codex | `~/.agents/skills/` | `.agents/skills/` | `$aura-theme-design`. [Docs](https://developers.openai.com/codex/skills) |
+| Claude Code | `~/.claude/skills/` | `.claude/skills/` | `/aura-theme-design`. [Docs](https://code.claude.com/docs/en/skills) |
+| Cursor | `~/.cursor/skills/` | `.agents/skills/` | Find `aura-theme-design` in the chat `/` menu. [Docs](https://cursor.com/docs/skills) |
+| Gemini CLI | `~/.gemini/skills/` | `.agents/skills/` | `/skills reload`, then ask to use `aura-theme-design`. [Docs](https://geminicli.com/docs/cli/skills/) |
+| GitHub Copilot CLI / VS Code | `~/.copilot/skills/` | `.github/skills/` | Ask to use the `aura-theme-design` skill in an agent session. [Copilot](https://docs.github.com/en/copilot/concepts/customizations/agent-skills) · [VS Code](https://code.visualstudio.com/docs/agent-customization/agent-skills) |
+| OpenCode | `~/.config/opencode/skills/` | `.opencode/skills/` | Ask it to load the `aura-theme-design` skill. [Docs](https://opencode.ai/docs/skills/) |
+| Google Antigravity | `~/.gemini/config/skills/` | `.agents/skills/` | Ask by name in the app. In CLI, use `/aura-theme-design`. [Docs](https://antigravity.google/docs/skills) |
+
+### 2. Download and install
+
+**Linux or macOS** · Use `curl` and `unzip`. Set `skill_dir` to the folder in your agent's row, for example `"$HOME/.claude/skills"` for Claude Code. The commands below use Codex's user-wide folder and keep an existing skill directory in place.
+
+```sh
+(
+  skill_dir="$HOME/.agents/skills"
+  skill_path="$skill_dir/aura-theme-design"
+  if [ -e "$skill_path" ] || [ -L "$skill_path" ]; then
+    printf 'Skill already exists at %s\n' "$skill_path" >&2
+    exit 1
+  fi
+
+  temp_dir=$(mktemp -d) || exit 1
+  trap 'rm -f "$temp_dir/aura-theme-design.zip"; rmdir "$temp_dir"' EXIT
+  curl -fL https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip \
+    -o "$temp_dir/aura-theme-design.zip" &&
+    mkdir -p "$skill_dir" &&
+    unzip -qn "$temp_dir/aura-theme-design.zip" -d "$skill_dir" &&
+    test -f "$skill_path/SKILL.md"
+)
+```
+
+**Windows PowerShell** · Set `$skillDir` to the folder in your agent's row, for example `Join-Path $HOME '.claude/skills'` for Claude Code. For a project install, run the commands inside the project and use its relative path.
+
+```powershell
+$skillDir = Join-Path $HOME '.agents/skills'
+$skillPath = Join-Path $skillDir 'aura-theme-design'
+if (Test-Path -LiteralPath $skillPath) { throw "Skill already exists at $skillPath" }
+
+$zip = Join-Path ([IO.Path]::GetTempPath()) ("aura-theme-design-{0}.zip" -f [guid]::NewGuid())
+try {
+  Invoke-WebRequest -Uri 'https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip' `
+    -OutFile $zip -UseBasicParsing -ErrorAction Stop
+  New-Item -ItemType Directory -Path $skillDir -Force -ErrorAction Stop | Out-Null
+  Expand-Archive -LiteralPath $zip -DestinationPath $skillDir -ErrorAction Stop
+  if (!(Test-Path -LiteralPath (Join-Path $skillPath 'SKILL.md'))) { throw 'SKILL.md was not extracted' }
+} finally {
+  Remove-Item -LiteralPath $zip -ErrorAction SilentlyContinue
+}
+```
+
+### 3. Apply or preview
+
+Start a new agent session or reload its skills, then invoke using the last column above. If your agent takes a plain prompt, use this one.
+
+> Use `aura-theme-design` for my current desktop or app. Show a preview first, preserve my settings, and tell me how to verify and undo the result. I use `<OS / desktop / app>`. My optional asset pack is at `<path>`.
+
+For the actual KDE and Kitty install, open the [theme checkout or download](#theme-setup) on the machine you want to theme. Give the local agent that path so it can run `aura.py` and check the app.
+
+**Upload or attach**
+
+- **Claude web** · In **Customize → Skills**, create a skill and choose **Upload a skill**. Select the original ZIP. [Docs](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
+- **ChatGPT** · If your workspace offers skill uploads, open **Skills → Create → Upload from your computer** and select the skill archive. [Docs](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
+- **Other assistants** · Attach the ZIP or share the whole extracted `aura-theme-design/` folder. Ask the assistant to read `SKILL.md` and use the bundled files. A hosted chat can prepare a config for you to save. Give a local agent access to the target machine for live activation.
+
+[AI application guide](docs/apply-with-ai.md) · [Module catalog](modules.json) · [Credits](docs/credits.md) · [MIT license](LICENSE)
 
 The previews show the theme running on KDE Plasma 6 and Kitty in an isolated Linux session. Run `python3 -m unittest discover -s tests -v` to check installer behavior.

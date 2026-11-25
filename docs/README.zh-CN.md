@@ -1,6 +1,8 @@
-# Aura Soulflame
+# ![Aura Soulflame](media/readme-header.png)
 
 [English](../README.md) · [한국어](README.ko.md) · **简体中文** · [日本語](README.ja.md)
+
+[安装主题](#theme-setup) · [安装 AI 技能](#agent-skill)
 
 以深梅紫色为底色、粉色为选中高亮、薄荷绿为火焰点缀的桌面主题。可以按需安装 Plasma 效果和 Kitty 配色，也可以导入自己的壁纸、光标和 Codex 宠物。
 
@@ -41,7 +43,16 @@
 
 [素材目录格式](assets.md)列出了文件名和 `--assets` 用法。要在其他终端或桌面环境中使用配色，可以参考[共享色板](../resources/palette.json)中的颜色用途和 16 色 ANSI 色值，填入目标应用的主题配置。
 
+<a name="theme-setup"></a>
+
 ## 安装并应用
+
+用以下命令克隆仓库，或下载并解压[完整主题 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.1.0/aura-soulflame-v0.1.0.zip)。
+
+```sh
+git clone https://github.com/Bum-Boo/aura-soulflame.git
+cd aura-soulflame
+```
 
 在仓库根目录使用 **Python 3.9 或更新版本**运行命令。下面的 Kitty 示例适用于 Linux 和 macOS。Plasma 组件需要 Linux 上的 KDE Plasma 6。在 Windows 上导入壁纸或 Codex 宠物时，使用 `py -3 aura.py`。
 
@@ -56,12 +67,82 @@ python3 aura.py status --modules kitty
 
 恢复时，先切回原主题或移除 Kitty 中的 `include` 行，再对已安装的模块运行 `python3 aura.py uninstall --modules kitty`。安装后修改过的文件会标记为 `modified` 并保留。
 
-## 让 AI 助手帮忙应用
+<a name="agent-skill"></a>
 
-[aura-theme-design 技能](../.agents/skills/aura-theme-design/SKILL.md)可以设计新主题、将 Aura 配色移植到其他应用，或应用仓库提供的组件。技能包内含 Kitty 配色预设、CSS 变量导出工具和对比度检查工具。
+## ![Aura Theme Design](media/agent-skill-header.png)
 
-> 请用 `$aura-theme-design` 为我当前使用的桌面或应用适配 Aura Soulflame。先展示预览并保留现有设置，再说明如何验证和恢复。可选素材包的路径是 `<路径>`。
+这个技能可以设计 Aura 风格的主题、把配色移植到其他应用，或应用 KDE 和 Kitty 组件。包内含共享色板、Kitty 预设、CSS 导出和对比度检查工具。[下载技能 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip) · [查看技能原文](../.agents/skills/aura-theme-design/SKILL.md)
 
-[下载技能 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip) · [技能安装和 AI 应用指南](apply-with-ai.md) · [组件清单](../modules.json) · [来源与致谢](credits.md) · [MIT 许可证](../LICENSE)
+### 1. 选择安装位置
+
+如果你的代理会查找 `.agents/skills/`，可以直接打开此仓库。要在其他项目中使用，请从下表选择**一个**位置，并将 `aura-theme-design/` 文件夹解压到该位置。最终应能找到 `aura-theme-design/SKILL.md`。
+
+| 代理 | 用户全局目录 | 仅当前项目 | 调用方式 |
+| --- | --- | --- | --- |
+| Codex | `~/.agents/skills/` | `.agents/skills/` | 输入 `$aura-theme-design`。[文档](https://developers.openai.com/codex/skills) |
+| Claude Code | `~/.claude/skills/` | `.claude/skills/` | 输入 `/aura-theme-design`。[文档](https://code.claude.com/docs/en/skills) |
+| Cursor | `~/.cursor/skills/` | `.agents/skills/` | 在聊天的 `/` 菜单中选择 `aura-theme-design`。[文档](https://cursor.com/docs/skills) |
+| Gemini CLI | `~/.gemini/skills/` | `.agents/skills/` | 执行 `/skills reload`，然后请求使用 `aura-theme-design`。[文档](https://geminicli.com/docs/cli/skills/) |
+| GitHub Copilot CLI / VS Code | `~/.copilot/skills/` | `.github/skills/` | 在代理会话中请求使用 `aura-theme-design`。[Copilot](https://docs.github.com/en/copilot/concepts/customizations/agent-skills) · [VS Code](https://code.visualstudio.com/docs/agent-customization/agent-skills) |
+| OpenCode | `~/.config/opencode/skills/` | `.opencode/skills/` | 请求加载 `aura-theme-design` 技能。[文档](https://opencode.ai/docs/skills/) |
+| Google Antigravity | `~/.gemini/config/skills/` | `.agents/skills/` | 在应用中按名称请求。在 CLI 中输入 `/aura-theme-design`。[文档](https://antigravity.google/docs/skills) |
+
+### 2. 下载并安装
+
+**Linux 和 macOS** · 需要 `curl` 和 `unzip`。将 `skill_dir` 改为表中对应的目录，例如 Claude Code 使用 `"$HOME/.claude/skills"`。下例使用 Codex 的用户全局目录，并会保留已有的同名技能目录。
+
+```sh
+(
+  skill_dir="$HOME/.agents/skills"
+  skill_path="$skill_dir/aura-theme-design"
+  if [ -e "$skill_path" ] || [ -L "$skill_path" ]; then
+    printf 'Skill already exists at %s\n' "$skill_path" >&2
+    exit 1
+  fi
+
+  temp_dir=$(mktemp -d) || exit 1
+  trap 'rm -f "$temp_dir/aura-theme-design.zip"; rmdir "$temp_dir"' EXIT
+  curl -fL https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip \
+    -o "$temp_dir/aura-theme-design.zip" &&
+    mkdir -p "$skill_dir" &&
+    unzip -qn "$temp_dir/aura-theme-design.zip" -d "$skill_dir" &&
+    test -f "$skill_path/SKILL.md"
+)
+```
+
+**Windows PowerShell** · 将 `$skillDir` 改为对应目录，例如 Claude Code 使用 `Join-Path $HOME '.claude/skills'`。若只在当前项目安装，请在项目目录中执行命令，并使用表中的相对路径。
+
+```powershell
+$skillDir = Join-Path $HOME '.agents/skills'
+$skillPath = Join-Path $skillDir 'aura-theme-design'
+if (Test-Path -LiteralPath $skillPath) { throw "Skill already exists at $skillPath" }
+
+$zip = Join-Path ([IO.Path]::GetTempPath()) ("aura-theme-design-{0}.zip" -f [guid]::NewGuid())
+try {
+  Invoke-WebRequest -Uri 'https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip' `
+    -OutFile $zip -UseBasicParsing -ErrorAction Stop
+  New-Item -ItemType Directory -Path $skillDir -Force -ErrorAction Stop | Out-Null
+  Expand-Archive -LiteralPath $zip -DestinationPath $skillDir -ErrorAction Stop
+  if (!(Test-Path -LiteralPath (Join-Path $skillPath 'SKILL.md'))) { throw 'SKILL.md was not extracted' }
+} finally {
+  Remove-Item -LiteralPath $zip -ErrorAction SilentlyContinue
+}
+```
+
+### 3. 应用或预览
+
+启动新的代理会话或刷新技能列表，再按表里的方式调用。普通聊天可以直接发送以下请求。
+
+> 请使用 `aura-theme-design` 为我当前的桌面或应用适配 Aura 主题。先展示预览，保留现有设置，并说明如何验证和恢复。我的环境是 `<操作系统 / 桌面环境 / 应用>`，可选素材包在 `<路径>`。
+
+要在 KDE 或 Kitty 中实际应用，请在目标电脑上[打开主题仓库或下载完整 ZIP](#theme-setup)。把目录告诉本地代理，让它运行 `aura.py` 并在应用中确认效果。
+
+**上传或附加文件**
+
+- **Claude 网页版** · 在 **Customize → Skills** 中创建技能，选择 **Upload a skill**，上传原始 ZIP。[文档](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
+- **ChatGPT** · 工作区启用技能上传时，打开 **Skills → Create → Upload from your computer**，选择技能压缩包。[文档](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
+- **其他助手** · 附上 ZIP 或完整的 `aura-theme-design/` 文件夹，请助手读取 `SKILL.md` 及其引用的文件。网页聊天可以生成供你保存的配置。实际启用主题时，使用能访问目标电脑的本地代理。
+
+[AI 应用指南](apply-with-ai.md) · [组件清单](../modules.json) · [来源与致谢](credits.md) · [MIT 许可证](../LICENSE)
 
 预览是在隔离的 Linux 环境中实际运行 KDE Plasma 6 和 Kitty 后录制的。使用 `python3 -m unittest discover -s tests -v` 可以检查安装工具的行为。

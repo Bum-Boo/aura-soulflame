@@ -2,13 +2,13 @@
 
 ## Use the skill
 
-The [Aura Theme Design skill](../.agents/skills/aura-theme-design/SKILL.md) is in `.agents/skills/aura-theme-design/` for repository-scoped discovery in Codex. To use it across repositories, extract the `aura-theme-design/` folder from the [skill ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/latest/download/aura-theme-design.zip) into `~/.agents/skills/`. Use `$aura-theme-design` in your request. In another Agent Skills client, register the extracted folder or ask the assistant to read its `SKILL.md` and use its relative resources. [Codex skill discovery](https://developers.openai.com/codex/skills)
+Open the repository in an agent that discovers `.agents/skills/` to use the bundled skill. To install it across projects or use it in an agent with a different skill directory, follow the [agent installation guide](../README.md#agent-skill). It includes shell and PowerShell commands, discovery paths, and the command or prompt to invoke the skill for each agent.
 
 The extracted skill includes the Aura palette, a Kitty preset, CSS export, and contrast checks. Use the repository checkout for the Plasma packages and `aura.py` installer.
 
 A request to give your assistant
 
-> Use `$aura-theme-design` to apply Aura Soulflame to my current desktop or terminal. Detect my environment and show me the plan for the components I ask for. Apply them through the native settings and show me how to switch back. My optional art pack is at `<path>`.
+> Use `aura-theme-design` to apply Aura Soulflame to my current desktop or terminal. Detect my environment and show me the plan for the components I ask for. Apply them through the native settings and show me how to switch back. My optional art pack is at `<path>`.
 
 ## Detect and choose
 
