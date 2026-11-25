@@ -1,52 +1,65 @@
 # Aura Soulflame
 
-A dark plum desktop theme with pink selection, mint highlights, and animated flame effects. Use the palette across apps, install individual components, or pair the theme with artwork you can use.
+**English** · [한국어](docs/README.ko.md) · [简体中文](docs/README.zh-CN.md) · [日本語](docs/README.ja.md)
 
-![Aura Soulflame splash with mint flames on a plum gradient](docs/splash.png)
+A desktop theme built around plum backgrounds, pink selection, and mint flames. Pick individual Plasma effects or the Kitty palette, then bring your own wallpapers, cursors, or Codex pet if you want them.
 
-[한국어 안내](docs/README.ko.md) · [Apply with an AI assistant](docs/apply-with-ai.md) · [Asset pack format](docs/assets.md)
+![The Plasma login splash reveals a central mint flame and lights the smaller flames in sequence](docs/media/splash.gif)
 
-## Install a component
+**Splash** (`plasma-splash`) plays after login as Plasma starts. [Static preview](docs/splash.png)
 
-Use Python 3.9 or newer. The installer reports the planned destinations as JSON and installs files for the current user. Choose each installed item from its application's settings. This example installs Kitty's palette on Linux or macOS.
+## What each component does
+
+### KDE Plasma 6
+
+| Colors | Night |
+| --- | --- |
+| <img src="docs/media/colors.png" width="380" alt="Plasma Colors shows Aura Soulflame with plum backgrounds and pink selection"> | <img src="docs/media/night.png" width="380" alt="The Night lock-screen wallpaper places a mint flame to the right on a plum gradient"> |
+| `plasma-colors` sets window, text, focus, and selection colors. Choose **Aura Soulflame (Portable)** in System Settings → Colors. | `plasma-lock` adds **Aura Soulflame Night**, the flame scene under Screen Locking → Appearance → Wallpaper type. |
+
+| Drift | Panel |
+| --- | --- |
+| <img src="docs/media/drift.gif" width="380" alt="Small mint and amber embers drift up the edges of a dark wallpaper"> | <img src="docs/media/panel.gif" width="258" alt="The panel widget shows a mint flame that brightens when clicked"> |
+| `plasma-drift` animates embers over a gradient or your own image. Choose **Aura Soulflame Drift** in the desktop or lock-screen wallpaper picker. Turn off animation in the wallpaper's settings. | `plasma-panel` adds a flame to the panel or desktop. In Edit Mode → Add Widgets, choose **Aura Soulflame Panel**. Click the flame to wake it. |
+
+To turn on the splash, choose **Aura Soulflame Splash** in System Settings → Splash Screen.
+
+### Kitty
+
+![Kitty showing the plum background, mint cursor, pink text accents, and both rows of the 16-color ANSI palette](docs/media/kitty.png)
+
+`kitty` supplies the background, foreground, cursor, selection, tab, and ANSI colors. Preview with `kitty --config <path-to-aura-soulflame.conf>`. To keep the palette, add `include aura-soulflame.conf` after any competing preset in `kitty.conf`. Set `KITTY_CONFIG_DIRECTORY` for the installer if Kitty uses a different config directory.
+
+### Your own assets
+
+| Module | What you provide | Where you use it |
+| --- | --- | --- |
+| `cursor` | An extracted Xcursor theme with `index.theme` and `cursors/` | Linux desktop or compositor cursor settings |
+| `wallpapers` | Local PNG, JPEG, or WebP files | Your OS wallpaper picker |
+| `codex-pet` | `pet.json` and its referenced sprite sheet | Codex pet picker. In a compatible terminal, run `/pets` and search by the manifest ID. |
+| Plasma portraits | Transparent PNGs for each pose used by the chosen component | Splash, Night, or Panel in place of the default flame |
+
+See the [asset pack layout](docs/assets.md) for file names and `--assets` examples. For another terminal or desktop, map the roles and 16 ANSI colors in [palette.json](resources/palette.json) to its native theme format.
+
+## Install and apply
+
+Run these commands from the repository root with **Python 3.9 or newer**. The Kitty example is for Linux or macOS. Plasma modules require KDE Plasma 6 on Linux. On Windows, use `py -3 aura.py` for local wallpapers or a Codex pet.
 
 ```sh
 python3 aura.py list
 python3 aura.py plan --modules kitty
 python3 aura.py install --modules kitty
-python3 aura.py status
+python3 aura.py status --modules kitty
 ```
 
-| Resource | Where to use it |
-| --- | --- |
-| `kitty` | Linux and macOS Kitty. Add `include aura-soulflame.conf` after any competing color preset in `kitty.conf`. Set `KITTY_CONFIG_DIRECTORY` for the installer when Kitty uses a different config directory. Preview with `kitty --config /path/to/aura-soulflame.conf`. |
-| `plasma-colors` | Plasma 6 System Settings → Colors → **Aura Soulflame (Portable)**. |
-| `plasma-splash` | Plasma 6 System Settings → Splash Screen → **Aura Soulflame Splash**. |
-| `plasma-lock` | Plasma 6 Screen Locking → Appearance → Wallpaper type → **Aura Soulflame Night**. |
-| `plasma-drift` | Plasma 6 desktop wallpaper or screen-lock wallpaper → **Aura Soulflame Drift**. Browse for your own image or use the built-in gradient. The settings include an animation toggle. |
-| `plasma-panel` | Plasma 6 Edit Mode → Add Widgets → **Aura Soulflame Panel**. Click the widget to wake the flame. |
-| `cursor` | Linux Xcursor. Install your theme package and choose it under the desktop's Cursor settings. |
-| `wallpapers` | Select one of your installed images from your operating system's wallpaper picker. |
-| `codex-pet` | Install your pet package and choose it in Codex. In a compatible terminal, open `/pets` and search for the ID in `pet.json`. |
+On Linux, use the same sequence with `--modules plasma-colors plasma-splash` to install the Plasma palette and splash. Add other module names as needed. The plan shows the actual destinations under your user's config and data directories. After installation, select the component in the app or desktop settings shown above.
 
-Use `--assets /path/to/asset-pack` with the three asset-only modules or with Plasma components that accept optional portraits. See the [asset pack layout](docs/assets.md) for file names and examples. For a manual port to another desktop or terminal, use the named roles and ANSI colors in [palette.json](resources/palette.json).
+To switch back, first select your previous theme or remove the Kitty include. Then run `python3 aura.py uninstall --modules kitty`, using the modules you installed. If you edited an installed file, the installer reports `modified` and keeps it in place.
 
-On KDE Plasma 6, use `python3 aura.py install --modules plasma-colors plasma-splash` after planning those modules. On Windows, use `py -3 aura.py` for local wallpapers or a Codex pet.
+## Apply with an AI assistant
 
-The planner uses the active `XDG_*`, `KITTY_CONFIG_DIRECTORY`, and `CODEX_HOME` locations when set. A differing existing file or package is reported as a conflict. An identical pre-existing resource remains under its existing owner's control. Install and removal work one component at a time after plan validation. An active desktop session can keep a component cached until you reload its app or settings view.
+> Read `AGENTS.md` and detect my OS, desktop, and target app. Show me an Aura Soulflame plan for the components I choose. Apply them while preserving my existing settings, check the result in the app, and show me how to undo it. My optional asset pack is at `<path>`.
 
-## Switch back
+[AI application guide](docs/apply-with-ai.md) · [Module catalog](modules.json) · [Credits and provenance](docs/credits.md)
 
-Select your previous theme or remove the Kitty include before uninstalling. The tool removes resources recorded in its receipt and reports any resource whose digest changed since install. Recover or keep edited files yourself before replacing them.
-
-```sh
-python3 aura.py uninstall --modules kitty
-```
-
-## Verify or adapt
-
-```sh
-python3 -m unittest discover -s tests -v
-```
-
-[Module catalog](modules.json) lists sources, destination roots, and platform constraints. [Credits and provenance](docs/credits.md) records the origin of the portable theme and upstream references.
+The previews show the theme running on KDE Plasma 6 and Kitty in an isolated Linux session. Run `python3 -m unittest discover -s tests -v` to check installer behavior.
