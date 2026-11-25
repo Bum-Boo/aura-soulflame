@@ -19,3 +19,28 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Scope of this license
+
+In this repository, "the Software" means only the original code, scripts,
+configuration, and theme files. That includes colors, palettes, QML, the
+installer, documentation text, and original graphics that do not depict a
+character. The abstract flame frames and flat interface graphics listed in
+ASSETS-LICENSE are part of the Software.
+
+This license does not apply to character artwork. It does not grant any right
+in the character Aura or in Frieren: Beyond Journey's End. Those rights stay
+with their holders.
+
+Images that depict Aura are provided for personal, non-commercial fan use
+only. They were generated with OpenAI's GPT image generation. They are not
+relicensable under this license or any other license offered here. The Aura
+Symbols font is excluded as well, because one of its glyphs depicts Aura.
+
+The excluded paths, the fan-use terms, and the non-character graphics that
+remain under this license are listed in ASSETS-LICENSE. Third-party components
+keep the license notices stored beside them.
+
+The agent skill copies this file. The skill bundle itself contains only
+Software: the palette, the Kitty preset, scripts, and skill docs. It does not
+contain the excluded artwork.

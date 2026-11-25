@@ -172,6 +172,14 @@ For the actual KDE and Kitty install, open the [theme checkout or download](#the
 - **ChatGPT** · If your workspace offers skill uploads, open **Skills → Create → Upload from your computer** and select the skill archive. [Docs](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 - **Other assistants** · Attach the ZIP or share the whole extracted `aura-theme-design/` folder. Ask the assistant to read `SKILL.md` and use the bundled files. A hosted chat can prepare a config for you to save. Give a local agent access to the target machine for live activation.
 
-[AI application guide](docs/apply-with-ai.md) · [Module catalog](modules.json) · [Credits](docs/credits.md) · [MIT license](LICENSE)
+## License
+
+The [MIT license](LICENSE) covers only the original code, scripts, configuration, and theme files. That includes colors, palettes, QML, the installer, documentation text, and original graphics that do not depict Aura, such as the abstract flame frames.
+
+It does not grant any right in the character artwork, in Aura, or in *Frieren: Beyond Journey’s End*. Those rights stay with their holders. Images that depict Aura are for personal, non-commercial fan use only. They were generated with OpenAI's GPT image generation, they are not part of the MIT license, and they cannot be relicensed. The excluded paths and terms are in [ASSETS-LICENSE](ASSETS-LICENSE).
+
+The Aura Symbols font is excluded too, because its head glyph depicts Aura. Recolored Breeze icons and the Daemon-based Plasma style keep their own LGPL notices.
+
+[AI application guide](docs/apply-with-ai.md) · [Module catalog](modules.json) · [Credits](docs/credits.md) · [License](#license)
 
 The previews show the theme running on KDE Plasma 6 and Kitty in an isolated Linux session. Run `python3 -m unittest discover -s tests -v` to check installer behavior.

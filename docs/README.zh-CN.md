@@ -172,6 +172,14 @@ try {
 - **ChatGPT** · 工作区启用技能上传时，打开 **Skills → Create → Upload from your computer**，选择技能压缩包。[文档](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 - **其他助手** · 附上 ZIP 或完整的 `aura-theme-design/` 文件夹，请助手读取 `SKILL.md` 及其引用的文件。网页聊天可以生成供你保存的配置。实际启用主题时，使用能访问目标电脑的本地代理。
 
-[AI 应用指南](apply-with-ai.md) · [组件清单](../modules.json) · [来源与致谢](credits.md) · [MIT 许可证](../LICENSE)
+## 许可证
+
+[MIT 许可证](../LICENSE)只覆盖本仓库中的原创代码、脚本、配置和主题文件。其中包括颜色、色板、QML、安装器、文档正文，以及不描绘阿乌拉的原创图形，例如抽象火焰帧。
+
+它不授予角色图、阿乌拉或《葬送的芙莉莲》的任何权利。这些权利仍归各自权利人所有。描绘阿乌拉的图像仅供个人、非商业的同人使用。这些图像由 OpenAI 的 GPT 图像生成制作，不属于 MIT 许可，也不能再许可给他人。排除的路径和条款见 [ASSETS-LICENSE](../ASSETS-LICENSE)。
+
+Aura 符号字体同样排除在外，因为它的头部字形描绘了阿乌拉。重新着色的 Breeze 图标和基于 Daemon 的 Plasma 样式仍遵循各自的 LGPL 声明。
+
+[AI 应用指南](apply-with-ai.md) · [组件清单](../modules.json) · [来源与致谢](credits.md) · [许可证](#许可证)
 
 预览是在隔离的 Linux 环境中实际运行 KDE Plasma 6 和 Kitty 后录制的。使用 `python3 -m unittest discover -s tests -v` 可以检查安装工具的行为。

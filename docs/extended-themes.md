@@ -1,6 +1,6 @@
 # Aura Soulflame theme collection
 
-Start in the repository or the extracted release. The supplied pack is at `assets/character/`. Each component can be installed on its own.
+Start in the repository or the extracted release. The supplied pack is at `assets/character/`. Each component can be installed on its own. Images that depict Aura are fan art for personal, non-commercial use and are not under the MIT license. See [ASSETS-LICENSE](../ASSETS-LICENSE).
 
 | Component | Files | Where it appears |
 | --- | --- | --- |

@@ -1,0 +1,132 @@
+Character artwork and other excluded files
+
+This notice applies to the paths listed under "Excluded paths" below. The MIT
+license in LICENSE does not apply to those paths.
+
+Aura and Frieren: Beyond Journey's End belong to their rights holders. This
+repository is an unofficial fan-made theme. Nothing here is a license from
+those rights holders, and nothing here makes the fan images official.
+
+The character-depicting images were generated with OpenAI's GPT image
+generation.
+
+You may install and use the excluded files for your own personal,
+non-commercial fan use, and you may copy this repository as a whole for that
+purpose if this notice stays with it.
+
+You may not sell these files, use them commercially, or relicense them. You
+may not grant anyone else a license to them. The MIT license does not give
+you those rights.
+
+Excluded paths
+
+These paths depict Aura, or they are cursor themes and manifests built from
+that artwork:
+
+- assets/character/
+- assets/cursors/AuraSD/
+- assets/cursors/AuraSD-Character/
+- assets/cursors/AuraSD-Complete/
+- assets/cursors/AuraSD-Poses-Large/
+- assets/cursors/AuraSD-Scale/
+- assets/cursors/AuraSD-Scale-8/
+- assets/cursors/AuraSD-States/
+- assets/orca/bg-closeup.png
+- assets/orca/bg-soulflame.jpg
+- themes/sddm/aura-soulflame/background.png
+- themes/plymouth/aura-soulflame/background.png
+- themes/plymouth/aura-soulflame-classic/watermark.png
+- themes/grub/aura-soulflame/background.png
+- themes/plasma/icons/AuraSoulflame/apps/24/aura-soulflame-launcher.png
+- themes/plasma/icons/AuraSoulflame/apps/32/aura-soulflame-launcher.png
+- themes/plasma/icons/AuraSoulflame/apps/48/aura-soulflame-launcher.png
+- themes/plasma/icons/AuraSoulflame/apps/64/aura-soulflame-launcher.png
+- themes/plasma/icons/AuraSoulflame/apps/128/aura-soulflame-launcher.png
+- themes/plasma/icons/AuraSoulflame/apps/256/aura-soulflame-launcher.png
+- docs/media/aura-cursor.gif
+- docs/media/aura-pet.gif
+- docs/media/sddm-aura.jpg
+- docs/media/wallpaper-gallery.jpg
+
+`assets/character/` includes the character sheets, portraits, wallpapers, the
+Codex pet sprite sheet, the pet manifest, and the character cursor theme.
+`assets/orca/aura-theme.css` is configuration and stays under the MIT license,
+even though it points at the two excluded backgrounds.
+
+The AuraSD cursor directories also contain some function glyphs adapted from
+KDE Breeze Cursors. Those glyphs stay under the LGPL and GPL notices in
+`assets/cursors/`. The notices themselves (`BREEZE-CURSORS-NOTICE.txt`,
+`GPL-3.0.txt`, and `LGPL-3.0.txt`) are third-party license texts. The Aura
+frames in the same themes are fan art and are not MIT.
+
+Aura Symbols
+
+The Aura Symbols font is original, but it is excluded from the MIT license.
+The U+E9A2 head glyph depicts Aura (horns and twin braids). The scales and
+sword glyphs are in the same font file, so the file is not offered under MIT.
+The same personal, non-commercial fan terms above apply to:
+
+- themes/sddm/aura-soulflame/AuraSymbols.otf
+- docs/media/aura-symbols.png
+
+Graphics that stay under the MIT license
+
+These graphics do not depict Aura. They are original theme or documentation
+graphics and are part of the Software in LICENSE.
+
+Abstract flame frames:
+
+- themes/sddm/aura-soulflame/flame/
+- themes/plymouth/aura-soulflame/flame-00.png through flame-35.png
+- themes/plymouth/aura-soulflame-classic/animation-0001.png through animation-0018.png
+
+Flat interface graphics:
+
+- themes/plymouth/aura-soulflame/bullet.png
+- themes/plymouth/aura-soulflame/entry.png
+- themes/grub/aura-soulflame/select_c.png
+- themes/grub/aura-soulflame/select_e.png
+- themes/grub/aura-soulflame/select_n.png
+- themes/grub/aura-soulflame/select_ne.png
+- themes/grub/aura-soulflame/select_nw.png
+- themes/grub/aura-soulflame/select_s.png
+- themes/grub/aura-soulflame/select_se.png
+- themes/grub/aura-soulflame/select_sw.png
+- themes/grub/aura-soulflame/select_w.png
+- themes/grub/aura-soulflame/term_c.png
+- themes/grub/aura-soulflame/term_e.png
+- themes/grub/aura-soulflame/term_n.png
+- themes/grub/aura-soulflame/term_ne.png
+- themes/grub/aura-soulflame/term_nw.png
+- themes/grub/aura-soulflame/term_s.png
+- themes/grub/aura-soulflame/term_se.png
+- themes/grub/aura-soulflame/term_sw.png
+- themes/grub/aura-soulflame/term_w.png
+
+Documentation previews that do not depict Aura:
+
+- docs/media/readme-header.png
+- docs/media/agent-skill-header.png
+- docs/media/colors.png
+- docs/media/kitty.png
+- docs/media/night.png
+- docs/media/splash.gif
+- docs/media/panel.gif
+- docs/media/drift.gif
+- docs/splash.png
+
+The README and skill headers are typeset with UnifrakturMaguntia. See
+docs/credits.md. The preview images show this theme in KDE Plasma or Kitty.
+They do not relicense those applications.
+
+Third-party components
+
+These are not MIT, and they are not the fan-art files above. They keep their
+own notices:
+
+- themes/plasma/styles/aura-soulflame/ is a recolor of the Daemon style. Its
+  metadata License field stays LGPL, and the bundled GPL text stays with the
+  style.
+- The folder and status icons in themes/plasma/icons/AuraSoulflame/ are
+  recolored Breeze icons and stay under the bundled LGPL notice. Only the
+  launcher PNGs listed above are fan art.
