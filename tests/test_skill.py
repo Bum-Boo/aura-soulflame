@@ -46,3 +46,14 @@ class SkillBundleTest(unittest.TestCase):
         normal = next(pair for pair in checks if pair["background"] == "background" and pair["foreground"] == "foreground")
         self.assertFalse(normal["passes"])
         self.assertEqual(normal["ratio"], 1)
+
+    def test_custom_app_role_pair_needs_no_terminal_palette(self):
+        with tempfile.TemporaryDirectory() as directory:
+            palette = Path(directory) / "web.json"
+            palette.write_text(json.dumps({"colors": {"focus": "#FFFFFF", "panel": "#000000"}}), encoding="utf-8")
+            result = subprocess.run([sys.executable, str(SKILL / "scripts/palette.py"), "contrast",
+                                     "--palette", str(palette), "--pair", "focus:panel:3"],
+                                    capture_output=True, text=True, check=True)
+        self.assertEqual(json.loads(result.stdout)["pairs"], [
+            {"foreground": "focus", "background": "panel", "ratio": 21, "minimum": 3, "passes": True}
+        ])
