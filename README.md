@@ -4,6 +4,8 @@
 
 [Install the theme](#theme-setup) · [Install the AI skill](#agent-skill) · [Browse the collection](#included-assets)
 
+Aura Soulflame is an **unofficial fan-made desktop theme** inspired by Aura from the anime *Frieren: Beyond Journey’s End*. Rights in the character and the original work belong to their respective rights holders. [Official Aura character page](https://frieren-anime.jp/character/chara_group2/2-2/)
+
 A desktop theme in plum, pink and mint. The full collection includes the character art, animated cursors, wallpapers, Codex pet, Aura Symbols, and native themes for KDE Plasma, Kitty, Orca, SDDM, GRUB and Plymouth.
 
 ![The Plasma login splash reveals a central mint flame and lights the smaller flames in sequence](docs/media/splash.gif)
@@ -47,9 +49,9 @@ See the [asset pack layout](docs/assets.md) for file names and `--assets` exampl
 
 ## Included artwork and themes
 
-![Aura wallpaper gallery with nine designs](docs/media/wallpaper-gallery.jpg)
+![Aura wallpaper gallery with six designs](docs/media/wallpaper-gallery.jpg)
 
-[Download all nine wallpapers](assets/character/wallpapers) · [Character sheets and portraits](assets/character/art)
+[Browse all six wallpapers](assets/character/wallpapers) · [Character sheets and portraits](assets/character/art)
 
 | Animated Xcursor presets | Codex pet |
 | --- | --- |
@@ -74,7 +76,7 @@ Orca IDE, the KDE lock screen, Plasma style and icons, the SDDM login screen, an
 
 ## Install and apply
 
-Clone the repository, or download the [full theme ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.0/aura-soulflame-v0.2.0.zip) and open the extracted folder.
+Clone the repository, or download the [full theme ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.1/aura-soulflame-v0.2.1.zip) and open the extracted folder.
 
 ```sh
 git clone https://github.com/Bum-Boo/aura-soulflame.git

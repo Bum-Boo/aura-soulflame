@@ -4,6 +4,8 @@
 
 [テーマをインストール](#theme-setup) · [AI スキルをインストール](#agent-skill) · [同梱内容を見る](#included-assets)
 
+Aura Soulflame は、アニメ『葬送のフリーレン』のアウラを題材にした**非公式のファンメイドテーマ**です。キャラクターと原作の権利は、それぞれの権利者に帰属します。 [公式キャラクター紹介](https://frieren-anime.jp/character/chara_group2/2-2/)
+
 深いプラム色にピンクの選択色とミント色の炎を合わせたデスクトップテーマです。キャラクター素材、アニメーションカーソル、壁紙、Codex ペット、Aura Symbols フォントと、KDE Plasma、Kitty、Orca、SDDM、GRUB、Plymouth のテーマを収録しています。
 
 ![Plasma のログイン直後に中央のミント色の炎が現れ、周囲の小さな炎が順に灯る](media/splash.gif)
@@ -47,9 +49,9 @@
 
 ## 収録イラストとテーマ
 
-![Aura の壁紙 9 枚のプレビュー](media/wallpaper-gallery.jpg)
+![Aura の壁紙 6 枚のプレビュー](media/wallpaper-gallery.jpg)
 
-[壁紙 9 枚を見る](../assets/character/wallpapers) · [キャラクター設定画とポートレート](../assets/character/art)
+[壁紙 6 枚を見る](../assets/character/wallpapers) · [キャラクター設定画とポートレート](../assets/character/art)
 
 | アニメーションカーソル | Codex ペット |
 | --- | --- |
@@ -74,7 +76,7 @@ Orca IDE、KDE のロック画面、Plasma のスタイルとアイコン、SDDM
 
 ## インストールと適用
 
-以下のコマンドでリポジトリを取得するか、[テーマ一式の ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.0/aura-soulflame-v0.2.0.zip)をダウンロードして展開してください。
+以下のコマンドでリポジトリを取得するか、[テーマ一式の ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.1/aura-soulflame-v0.2.1.zip)をダウンロードして展開してください。
 
 ```sh
 git clone https://github.com/Bum-Boo/aura-soulflame.git

@@ -4,6 +4,8 @@
 
 [테마 설치](#theme-setup) · [AI 스킬 설치](#agent-skill) · [전체 구성 보기](#included-assets)
 
+Aura Soulflame은 애니메이션 《장송의 프리렌》의 아우라를 바탕으로 만든 **비공식 팬메이드 테마**예요. 원작과 캐릭터에 대한 권리는 각 권리자에게 있습니다. [공식 캐릭터 소개](https://frieren-anime.jp/character/chara_group2/2-2/)
+
 짙은 자주색, 분홍색 선택 강조, 민트색 불꽃을 담은 데스크톱 테마예요. 우리가 만든 캐릭터 이미지, 움직이는 커서, 배경화면, 코덱스 펫, 심볼 폰트와 KDE Plasma·Kitty·Orca·SDDM·GRUB·Plymouth 테마가 들어 있어요.
 
 ![로그인 후 중앙 민트색 불꽃과 주변의 작은 불꽃이 차례로 켜지는 Plasma 스플래시](media/splash.gif)
@@ -47,9 +49,9 @@
 
 ## 함께 배포하는 이미지와 테마
 
-![아우라 배경화면 9장 미리보기](media/wallpaper-gallery.jpg)
+![아우라 배경화면 6장 미리보기](media/wallpaper-gallery.jpg)
 
-[배경화면 9장 보기](../assets/character/wallpapers) · [캐릭터 설정화와 초상화](../assets/character/art)
+[배경화면 6장 보기](../assets/character/wallpapers) · [캐릭터 설정화와 초상화](../assets/character/art)
 
 | 움직이는 마우스 커서 | 코덱스 펫 |
 | --- | --- |
@@ -74,7 +76,7 @@ Orca IDE, KDE 잠금화면, Plasma 스타일과 아이콘, SDDM 로그인 화면
 
 ## 설치하고 적용하기
 
-아래 명령으로 저장소를 받거나 [전체 테마 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.0/aura-soulflame-v0.2.0.zip)을 내려받아 압축을 푸세요.
+아래 명령으로 저장소를 받거나 [전체 테마 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.1/aura-soulflame-v0.2.1.zip)을 내려받아 압축을 푸세요.
 
 ```sh
 git clone https://github.com/Bum-Boo/aura-soulflame.git

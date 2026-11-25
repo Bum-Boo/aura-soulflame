@@ -4,6 +4,8 @@
 
 [安装主题](#theme-setup) · [安装 AI 技能](#agent-skill) · [查看完整内容](#included-assets)
 
+Aura Soulflame 是以动画《葬送的芙莉莲》中的阿乌拉为灵感制作的**非官方同人主题**。角色与原作的权利归各自权利人所有。 [官方角色介绍](https://frieren-anime.jp/character/chara_group2/2-2/)
+
 以深梅色、粉色和薄荷绿为主色的桌面主题。整套资源含角色图、动态鼠标指针、壁纸、Codex 宠物、Aura 符号字体，以及 KDE Plasma、Kitty、Orca、SDDM、GRUB 和 Plymouth 主题。
 
 ![登录后，Plasma 启动画面先显示中央的薄荷绿火焰，再依次点亮周围的小火焰](media/splash.gif)
@@ -47,9 +49,9 @@
 
 ## 随附美术资源与主题
 
-![九张 Aura 壁纸的预览](media/wallpaper-gallery.jpg)
+![六张 Aura 壁纸的预览](media/wallpaper-gallery.jpg)
 
-[查看九张壁纸](../assets/character/wallpapers) · [角色设定图与立绘](../assets/character/art)
+[查看六张壁纸](../assets/character/wallpapers) · [角色设定图与立绘](../assets/character/art)
 
 | 动态鼠标指针 | Codex 宠物 |
 | --- | --- |
@@ -74,7 +76,7 @@ python3 aura.py install --assets assets/character --modules cursor wallpapers co
 
 ## 安装并应用
 
-用以下命令克隆仓库，或下载并解压[完整主题 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.0/aura-soulflame-v0.2.0.zip)。
+用以下命令克隆仓库，或下载并解压[完整主题 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.1/aura-soulflame-v0.2.1.zip)。
 
 ```sh
 git clone https://github.com/Bum-Boo/aura-soulflame.git

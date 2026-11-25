@@ -6,7 +6,7 @@ Start in the repository or the extracted release. The supplied pack is at `asset
 | --- | --- | --- |
 | Character art | [Sheets](../assets/character/art) and [portraits](../assets/character/portraits) | Artwork reference, Plasma startup, Night and panel |
 | Animated cursors | [Poses](../assets/character/cursor) and [seven variations](../assets/cursors) | Xcursor settings on Linux |
-| Wallpapers | [Nine desktop and lock-screen images](../assets/character/wallpapers) | OS wallpaper picker or a Plasma wallpaper effect |
+| Wallpapers | [Six desktop and lock-screen images](../assets/character/wallpapers) | OS wallpaper picker or a Plasma wallpaper effect |
 | Codex pet | [Manifest and atlas](../assets/character/pet) | Codex pet picker |
 | Plasma shell and icons | [Style](../themes/plasma/styles/aura-soulflame) and [icons](../themes/plasma/icons/AuraSoulflame) | Panel, launcher, folders and system indicators |
 | Orca | [App and terminal plugin](../themes/orca/aura-soulflame) and [CSS and artwork](../assets/orca) | App, editor, terminal and custom CSS |

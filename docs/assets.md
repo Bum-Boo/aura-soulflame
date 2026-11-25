@@ -1,6 +1,6 @@
 # Asset packs
 
-The [included character pack](../assets/character) has portraits, a cursor theme, nine wallpapers, and a Codex pet. Run the installer with `--assets assets/character` to use it, or point to a pack of your own with the layout below. See the [full theme collection](extended-themes.md) for previews and activation steps.
+The [included character pack](../assets/character) has portraits, a cursor theme, six wallpapers, and a Codex pet. Run the installer with `--assets assets/character` to use it, or point to a pack of your own with the layout below. See the [full theme collection](extended-themes.md) for previews and activation steps.
 
 ```text
 my-assets/
