@@ -172,6 +172,14 @@ KDE や Kitty に適用するには、対象の PC で[テーマのリポジト�
 - **ChatGPT** · スキルのアップロードが有効なワークスペースで、**Skills → Create → Upload from your computer** を開き、スキルのアーカイブを選びます。[公式ガイド](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 - **そのほかのアシスタント** · ZIP または展開した `aura-theme-design/` フォルダー全体を添付し、`SKILL.md` と参照先のファイルを読むように頼みます。ウェブのチャットでは保存用の設定を作れます。実際の適用は対象 PC にアクセスできるローカルエージェントに任せます。
 
-[AI 向け適用ガイド](apply-with-ai.md) · [モジュール一覧](../modules.json) · [出典とクレジット](credits.md) · [MIT ライセンス](../LICENSE)
+## ライセンス
+
+[MIT ライセンス](../LICENSE)が対象とするのは、このリポジトリのオリジナルのコード、スクリプト、設定、テーマファイルだけです。色、パレット、QML、インストーラー、文書の本文、およびアウラを描いていないオリジナルの画像（抽象的な炎のフレームなど）が含まれます。
+
+キャラクターの画像、アウラ、『葬送のフリーレン』についての権利は付与しません。それらの権利は各権利者に残ります。アウラを描いた画像は、個人的な非商用のファン利用に限られます。これらの画像は OpenAI の GPT 画像生成で作られており、MIT ライセンスの対象ではなく、再許諾できません。対象外のパスと条件は [ASSETS-LICENSE](../ASSETS-LICENSE) にあります。
+
+Aura Symbols フォントも対象外です。頭部のグリフがアウラを描いているためです。色を変えた Breeze アイコンと、Daemon を基にした Plasma スタイルは、それぞれの LGPL の表示に従います。
+
+[AI 向け適用ガイド](apply-with-ai.md) · [モジュール一覧](../modules.json) · [出典とクレジット](credits.md) · [ライセンス](#ライセンス)
 
 プレビューは分離した Linux 環境で KDE Plasma 6 と Kitty を実際に動かして撮影しました。インストーラーの動作は `python3 -m unittest discover -s tests -v` で確認できます。

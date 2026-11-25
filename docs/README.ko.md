@@ -172,6 +172,14 @@ KDE·Kitty에 실제로 적용하려면 대상 PC에서 [테마 저장소를 열
 - **ChatGPT** · 스킬 업로드가 활성화된 워크스페이스에서 **Skills → Create → Upload from your computer**를 열고 스킬 압축 파일을 선택하세요. [공식 문서](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 - **그 밖의 에이전트** · ZIP이나 풀어 놓은 `aura-theme-design/` 폴더 전체를 첨부하세요. `SKILL.md`와 그 안에서 가리키는 파일을 읽으라고 요청하면 돼요. 웹 채팅은 저장할 설정 파일을 만들 수 있고, 실제 적용은 대상 PC에 접근할 수 있는 로컬 에이전트에 맡기세요.
 
-[AI 적용 가이드](apply-with-ai.md) · [모듈 목록](../modules.json) · [출처와 크레딧](credits.md) · [MIT 라이선스](../LICENSE)
+## 라이선스
+
+[MIT 라이선스](../LICENSE)는 이 저장소의 원본 코드, 스크립트, 설정, 테마 파일에만 적용돼요. 색 구성, 팔레트, QML, 설치 도구, 문서 글, 그리고 아우라를 그리지 않은 원본 그래픽(추상적인 불꽃 프레임 등)이 여기에 해당해요.
+
+캐릭터 이미지, 아우라, 《장송의 프리렌》에 대한 권리는 부여하지 않아요. 그 권리는 각 권리자에게 남아 있어요. 아우라가 그려진 이미지는 개인적인 비상업적 팬 용도로만 쓸 수 있어요. 이 이미지는 OpenAI의 GPT 이미지 생성으로 만들었고, MIT 라이선스에 포함되지 않으며 다시 라이선스할 수 없어요. 제외된 경로와 조건은 [ASSETS-LICENSE](../ASSETS-LICENSE)에 있어요.
+
+Aura Symbols 폰트도 제외돼요. 머리 글리프가 아우라를 그리기 때문이에요. 다시 칠한 Breeze 아이콘과 Daemon을 바탕으로 한 Plasma 스타일은 각자의 LGPL 고지를 따릅니다.
+
+[AI 적용 가이드](apply-with-ai.md) · [모듈 목록](../modules.json) · [출처와 크레딧](credits.md) · [라이선스](#라이선스)
 
 미리보기는 격리된 Linux 환경에서 KDE Plasma 6과 Kitty를 실행해 촬영했어요. 설치 도구는 `python3 -m unittest discover -s tests -v`로 점검할 수 있어요.

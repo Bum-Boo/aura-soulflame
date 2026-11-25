@@ -1,6 +1,6 @@
 # Asset packs
 
-The [included character pack](../assets/character) has portraits, a cursor theme, six wallpapers, and a Codex pet. Run the installer with `--assets assets/character` to use it, or point to a pack of your own with the layout below. See the [full theme collection](extended-themes.md) for previews and activation steps.
+The [included character pack](../assets/character) has portraits, a cursor theme, six wallpapers, and a Codex pet. Those images depict Aura, were generated with OpenAI's GPT image generation, and are for personal, non-commercial fan use. They are not under the MIT license. See [ASSETS-LICENSE](../ASSETS-LICENSE). Run the installer with `--assets assets/character` to use the pack, or point to a pack of your own with the layout below. See the [full theme collection](extended-themes.md) for previews and activation steps.
 
 ```text
 my-assets/
