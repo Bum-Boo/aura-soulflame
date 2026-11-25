@@ -2,9 +2,9 @@
 
 [English](../README.md) · [한국어](README.ko.md) · **简体中文** · [日本語](README.ja.md)
 
-[安装主题](#theme-setup) · [安装 AI 技能](#agent-skill)
+[安装主题](#theme-setup) · [安装 AI 技能](#agent-skill) · [查看完整内容](#included-assets)
 
-以深梅紫色为底色、粉色为选中高亮、薄荷绿为火焰点缀的桌面主题。可以按需安装 Plasma 效果和 Kitty 配色，也可以导入自己的壁纸、光标和 Codex 宠物。
+以深梅色、粉色和薄荷绿为主色的桌面主题。整套资源含角色图、动态鼠标指针、壁纸、Codex 宠物、Aura 符号字体，以及 KDE Plasma、Kitty、Orca、SDDM、GRUB 和 Plymouth 主题。
 
 ![登录后，Plasma 启动画面先显示中央的薄荷绿火焰，再依次点亮周围的小火焰](media/splash.gif)
 
@@ -43,11 +43,38 @@
 
 [素材目录格式](assets.md)列出了文件名和 `--assets` 用法。要在其他终端或桌面环境中使用配色，可以参考[共享色板](../resources/palette.json)中的颜色用途和 16 色 ANSI 色值，填入目标应用的主题配置。
 
+<a name="included-assets"></a>
+
+## 随附美术资源与主题
+
+![九张 Aura 壁纸的预览](media/wallpaper-gallery.jpg)
+
+[查看九张壁纸](../assets/character/wallpapers) · [角色设定图与立绘](../assets/character/art)
+
+| 动态鼠标指针 | Codex 宠物 |
+| --- | --- |
+| <img src="media/aura-cursor.gif" width="360" alt="动态鼠标指针"> | <img src="media/aura-pet.gif" width="264" alt="Codex 宠物"> |
+| [动态鼠标指针](../assets/cursors) | [Codex 宠物](../assets/character/pet) |
+
+| SDDM | Aura Symbols |
+| --- | --- |
+| <img src="media/sddm-aura.jpg" width="400" alt="Aura SDDM 登录界面"> | <img src="media/aura-symbols.png" width="380" alt="天平、剑与角色剪影符号"> |
+| [Aura SDDM 登录界面](../themes/sddm/aura-soulflame) | [AuraSymbols.otf](../themes/sddm/aura-soulflame/AuraSymbols.otf) |
+
+下例在 Linux 上安装指针、壁纸和宠物。请按需选择组件。
+
+```sh
+python3 aura.py plan --assets assets/character --modules cursor wallpapers codex-pet
+python3 aura.py install --assets assets/character --modules cursor wallpapers codex-pet
+```
+
+指南也涵盖 Orca IDE、KDE 锁屏、Plasma 样式和图标、SDDM 登录界面，以及 GRUB 和 Plymouth 启动主题。 [查看安装与启用指南](extended-themes.md)
+
 <a name="theme-setup"></a>
 
 ## 安装并应用
 
-用以下命令克隆仓库，或下载并解压[完整主题 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.1.0/aura-soulflame-v0.1.0.zip)。
+用以下命令克隆仓库，或下载并解压[完整主题 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.0/aura-soulflame-v0.2.0.zip)。
 
 ```sh
 git clone https://github.com/Bum-Boo/aura-soulflame.git

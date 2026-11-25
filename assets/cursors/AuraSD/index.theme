@@ -1,0 +1,5 @@
+[Icon Theme]
+Name=Aura SD
+Name[ko]=아우라 SD
+Comment=Chibi Aura with a mint pointer
+Inherits=breeze_cursors

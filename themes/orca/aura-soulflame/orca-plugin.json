@@ -1,0 +1,28 @@
+{
+  "manifestVersion": 2,
+  "id": "aura-soulflame",
+  "name": "Aura Soulflame",
+  "version": "1.0.0",
+  "execution": "data",
+  "description": "Orca colors from the local KDE and Kitty Aura Soulflame themes.",
+  "engines": {
+    "orca": ">=1.4.246"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "id": "soulflame",
+        "title": "Aura Soulflame",
+        "path": "app.json"
+      }
+    ],
+    "terminalThemes": [
+      {
+        "id": "soulflame",
+        "title": "Aura Soulflame",
+        "path": "terminal.json"
+      }
+    ]
+  },
+  "capabilities": []
+}

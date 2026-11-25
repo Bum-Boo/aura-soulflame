@@ -1,0 +1,5 @@
+[Icon Theme]
+Name=Aura SD - Complete Cursor Set
+Name[ko]=아우라 SD · 커서 전체 세트
+Comment=Animated default pointer and state-specific Aura SD cursors
+Inherits=breeze_cursors

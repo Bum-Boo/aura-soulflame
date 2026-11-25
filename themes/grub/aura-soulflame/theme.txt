@@ -1,0 +1,52 @@
+# Aura · Scales of Obedience — GRUB theme
+title-text: ""
+desktop-image: "background.png"
+desktop-image-scale-method: "crop"
+desktop-color: "#2b2235"
+terminal-font: "Aura Mono Regular 16"
+terminal-box: "term_*.png"
+terminal-left: "10%"
+terminal-top: "10%"
+terminal-width: "80%"
+terminal-height: "80%"
+
++ label {
+    left = 7%  top = 20%  width = 45%  height = 56
+    text = " Scales of Obedience"
+    font = "Aura Title Regular 40"
+    color = "#90e9d7"
+}
++ label {
+    left = 7%  top = 20%+60  width = 45%  height = 24
+    text = "Choose who kneels."
+    font = "Aura Small Regular 16"
+    color = "#c9b3d6"
+}
++ boot_menu {
+    left = 7%  top = 34%  width = 36%  height = 40%
+    item_font = "Aura Item Regular 22"
+    item_color = "#c9b3d6"
+    selected_item_font = "Aura Item Regular 22"
+    selected_item_color = "#ffffff"
+    item_height = 44
+    item_padding = 14
+    item_spacing = 6
+    icon_width = 0
+    icon_height = 0
+    item_icon_space = 0
+    selected_item_pixmap_style = "select_*.png"
+    scrollbar = false
+}
++ label {
+    id = "__timeout__"
+    left = 7%  top = 80%  width = 45%  height = 24
+    text = "  The scales tip in %d s"
+    font = "Aura Small Regular 16"
+    color = "#f46da9"
+}
++ label {
+    left = 7%  top = 85%  width = 60%  height = 24
+    text = " ↑↓ select      Enter boot      e edit · c console"
+    font = "Aura Small Regular 16"
+    color = "#8a7a99"
+}

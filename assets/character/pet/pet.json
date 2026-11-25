@@ -1,0 +1,6 @@
+{
+  "id": "aura",
+  "displayName": "아우라",
+  "description": "작은 천칭으로 작업 상태를 알려주는 아우라.",
+  "spritesheetPath": "spritesheet.webp"
+}

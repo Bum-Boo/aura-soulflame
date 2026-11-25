@@ -1,0 +1,114 @@
+/* Aura Soulflame, KDE-inspired Orca colors. */
+:root:root {
+  color-scheme: dark;
+  --background: #2b2235;
+  --editor-surface: #2b2235;
+  --foreground: #fff2e5;
+  --card: #38253e;
+  --card-foreground: #fff2e5;
+  --popover: #38253e;
+  --popover-foreground: #fff2e5;
+  --primary: #f46da9;
+  --primary-foreground: #2b2235;
+  --secondary: #472746;
+  --secondary-foreground: #fff2e5;
+  --muted: #36273f;
+  --muted-foreground: #dbc5d6;
+  --accent: #472746;
+  --accent-foreground: #fff2e5;
+  --border: #66506b;
+  --input: #765d76;
+  --ring: #f46da9;
+  --sidebar: #38253e;
+  --sidebar-foreground: #fff2e5;
+  --sidebar-primary: #f46da9;
+  --sidebar-primary-foreground: #2b2235;
+  --sidebar-accent: #472746;
+  --sidebar-accent-foreground: #fff2e5;
+  --sidebar-border: #66506b;
+  --sidebar-ring: #f46da9;
+  --destructive: #ffa4a8;
+  --destructive-foreground: #2b2235;
+  --terminal-pane-locate: #f46da9;
+  --ai-action-accent: #d4c5fb;
+  --agent-question: #ffd48a;
+  --agent-question-text: #ffd48a;
+  --status-success: #90e9d7;
+  --workspace-status-done: #d4c5fb;
+  --workspace-status-review: #90e9d7;
+  --workspace-status-progress: #ffd48a;
+  --tab-bar: #30304c;
+  --tab-group-split-divider: #66506b;
+  --tab-group-split-divider-strong: #9c246a;
+  --git-decoration-added: #90e9d7;
+  --git-decoration-modified: #ffd48a;
+  --git-decoration-deleted: #ffa4a8;
+  --git-decoration-renamed: #d4c5fb;
+  --aura-focus: #f46da9;
+  --aura-terminal-art: 0.65;
+  --worktree-sidebar: #38253e;
+  --worktree-sidebar-foreground: #fff2e5;
+  --worktree-sidebar-border: #66506b;
+  --worktree-sidebar-accent: #472746;
+  --worktree-sidebar-accent-foreground: #fff2e5;
+  --worktree-sidebar-ring: #f46da9;
+  --orca-security-background: #2b2235;
+  --orca-security-foreground: #fff2e5;
+  --orca-security-card: #38253e;
+  --orca-security-card-foreground: #fff2e5;
+  --orca-security-popover: #38253e;
+  --orca-security-popover-foreground: #fff2e5;
+  --orca-security-primary: #f46da9;
+  --orca-security-primary-foreground: #2b2235;
+  --orca-security-secondary: #472746;
+  --orca-security-secondary-foreground: #fff2e5;
+  --orca-security-muted: #36273f;
+  --orca-security-muted-foreground: #dbc5d6;
+  --orca-security-accent: #472746;
+  --orca-security-accent-foreground: #fff2e5;
+  --orca-security-border: #66506b;
+  --orca-security-input: #765d76;
+  --orca-security-ring: #f46da9;
+}
+
+body {
+  background: var(--background);
+}
+
+::selection {
+  background: #9c246a;
+  color: #fff2e5;
+}
+
+:where(button, [role="button"], [role="option"]):focus-visible {
+  outline: 2px solid var(--aura-focus);
+  outline-offset: -2px;
+}
+
+[data-tab-group-strip-id] [data-tab-id][data-active="true"] {
+  box-shadow: inset 0 2px var(--aura-focus);
+}
+
+[data-tab-group-strip-id] {
+  background-color: #30304c;
+}
+
+[data-tab-group-strip-id] [data-tab-id][data-active="true"] {
+  background-color: #472746;
+}
+
+[data-worktree-sidebar] [role="option"][aria-current="page"] {
+  box-shadow: inset 2px 0 var(--aura-focus);
+}
+
+.xterm::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: url("./bg-closeup.png") right center / cover no-repeat fixed;
+  opacity: var(--aura-terminal-art);
+  mix-blend-mode: screen;
+  mask-image: linear-gradient(90deg, transparent 44%, #0006 63%, #000 88%);
+}

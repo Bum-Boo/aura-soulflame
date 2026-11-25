@@ -6,7 +6,7 @@ The [Aura Soulflame repository](https://github.com/Bum-Boo/aura-soulflame) conta
 | --- | --- |
 | Kitty on Linux or macOS | `kitty`, or preview the bundled preset with `kitty --config <preset>` |
 | KDE Plasma 6 on Linux | `plasma-colors`, `plasma-splash`, `plasma-lock`, `plasma-drift`, or `plasma-panel` as requested |
-| A local Xcursor theme, wallpapers, or Codex pet | `cursor`, `wallpapers`, or `codex-pet` with `--assets <pack>` |
+| Xcursor, Plasma portraits, wallpapers or a Codex pet | Use the requested modules with `--assets assets/character` for the bundled pack or `--assets <pack>` for a supplied pack. |
 | Other terminals, desktops, or web apps | The native config format and the palette in this skill |
 
 In the repository, run `python3 aura.py list` and `python3 aura.py plan --modules ...` with the requested module names. Use `py -3 aura.py` on Windows for the supported local wallpaper and Codex pet modules. The plan reports the resolved destination, conflicts, and missing inputs. Follow [assets.md](https://github.com/Bum-Boo/aura-soulflame/blob/main/docs/assets.md) for the local pack layout, and keep the same selected modules and environment roots from plan through uninstall.

@@ -2,9 +2,9 @@
 
 [English](../README.md) · **한국어** · [简体中文](README.zh-CN.md) · [日本語](README.ja.md)
 
-[테마 설치](#theme-setup) · [AI 스킬 설치](#agent-skill)
+[테마 설치](#theme-setup) · [AI 스킬 설치](#agent-skill) · [전체 구성 보기](#included-assets)
 
-짙은 자주색 배경, 분홍색 선택 강조, 민트색 불꽃을 담은 데스크톱 테마예요. KDE 효과와 Kitty 색상표를 골라 쓰고, 가지고 있는 배경화면·커서·코덱스 펫도 가져올 수 있어요.
+짙은 자주색, 분홍색 선택 강조, 민트색 불꽃을 담은 데스크톱 테마예요. 우리가 만든 캐릭터 이미지, 움직이는 커서, 배경화면, 코덱스 펫, 심볼 폰트와 KDE Plasma·Kitty·Orca·SDDM·GRUB·Plymouth 테마가 들어 있어요.
 
 ![로그인 후 중앙 민트색 불꽃과 주변의 작은 불꽃이 차례로 켜지는 Plasma 스플래시](media/splash.gif)
 
@@ -43,11 +43,38 @@
 
 [에셋 폴더 형식](assets.md)에서 파일 이름과 `--assets` 사용 예시를 볼 수 있어요. 다른 터미널이나 데스크톱에 색을 옮길 때는 [공통 팔레트](../resources/palette.json)의 역할별 색과 ANSI 16색을 해당 앱의 테마 설정에 매핑하면 돼요.
 
+<a name="included-assets"></a>
+
+## 함께 배포하는 이미지와 테마
+
+![아우라 배경화면 9장 미리보기](media/wallpaper-gallery.jpg)
+
+[배경화면 9장 보기](../assets/character/wallpapers) · [캐릭터 설정화와 초상화](../assets/character/art)
+
+| 움직이는 마우스 커서 | 코덱스 펫 |
+| --- | --- |
+| <img src="media/aura-cursor.gif" width="360" alt="움직이는 마우스 커서"> | <img src="media/aura-pet.gif" width="264" alt="코덱스 펫"> |
+| [움직이는 마우스 커서](../assets/cursors) | [코덱스 펫](../assets/character/pet) |
+
+| SDDM | Aura Symbols |
+| --- | --- |
+| <img src="media/sddm-aura.jpg" width="400" alt="아우라 SDDM 로그인 화면"> | <img src="media/aura-symbols.png" width="380" alt="천칭·검·아우라 실루엣 심볼"> |
+| [아우라 SDDM 로그인 화면](../themes/sddm/aura-soulflame) | [AuraSymbols.otf](../themes/sddm/aura-soulflame/AuraSymbols.otf) |
+
+Linux에서 커서, 배경화면, 펫을 설치하는 예시예요. 필요한 모듈만 골라 실행하세요.
+
+```sh
+python3 aura.py plan --assets assets/character --modules cursor wallpapers codex-pet
+python3 aura.py install --assets assets/character --modules cursor wallpapers codex-pet
+```
+
+Orca IDE, KDE 잠금화면, Plasma 스타일과 아이콘, SDDM 로그인 화면, GRUB·Plymouth 부팅 테마의 설치법이 있어요. [구성별 설치 및 활성화 가이드](extended-themes.md)
+
 <a name="theme-setup"></a>
 
 ## 설치하고 적용하기
 
-아래 명령으로 저장소를 받거나 [전체 테마 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.1.0/aura-soulflame-v0.1.0.zip)을 내려받아 압축을 푸세요.
+아래 명령으로 저장소를 받거나 [전체 테마 ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.0/aura-soulflame-v0.2.0.zip)을 내려받아 압축을 푸세요.
 
 ```sh
 git clone https://github.com/Bum-Boo/aura-soulflame.git

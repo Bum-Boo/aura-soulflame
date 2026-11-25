@@ -6,6 +6,8 @@ Open the repository in an agent that discovers `.agents/skills/` to use the bund
 
 The extracted skill includes the Aura palette, a Kitty preset, CSS export, and contrast checks. Use the repository checkout for the Plasma packages and `aura.py` installer.
 
+For the bundled portraits, cursor, wallpapers and pet, pass `--assets assets/character`. For Orca, the symbol font and machine-specific login and boot themes, follow the [extended theme guide](extended-themes.md).
+
 A request to give your assistant
 
 > Use `aura-theme-design` to apply Aura Soulflame to my current desktop or terminal. Detect my environment and show me the plan for the components I ask for. Apply them through the native settings and show me how to switch back. My optional art pack is at `<path>`.
@@ -14,8 +16,9 @@ A request to give your assistant
 
 | Environment | Pick |
 | --- | --- |
-| KDE Plasma 6 on Linux | `plasma-colors`, plus any requested Plasma effects. Verify the Plasma version with `plasmashell --version` and list the packages with `kpackagetool6`. |
+| KDE Plasma 6 on Linux | `plasma-colors`, `plasma-style`, `plasma-icons` and the requested Plasma effects. Verify the Plasma version with `plasmashell --version` and list the packages with `kpackagetool6`. |
 | Kitty | `kitty`. Locate the actual config with Kitty's **Show Configuration** action or its command-line diagnostics when several config roots exist. |
+| Orca IDE | Add `themes/orca/aura-soulflame` using Orca's plugin settings, then select the app and terminal themes. |
 | GNOME, a tiling compositor, or another terminal | Read `resources/palette.json`. Map `background`, `foreground`, `selection`, `accent`, `mint`, and `ansi` to the matching settings in that app's existing theme file. |
 | Linux desktop with Xcursor | `cursor` with a user-supplied theme. Use the session's cursor picker or documented compositor setting. |
 | Codex app or terminal | `codex-pet` with a validated pack. Apply in the client's pet picker. Terminal rendering depends on the terminal graphics setup. |

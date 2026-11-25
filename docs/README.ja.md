@@ -2,9 +2,9 @@
 
 [English](../README.md) · [한국어](README.ko.md) · [简体中文](README.zh-CN.md) · **日本語**
 
-[テーマをインストール](#theme-setup) · [AI スキルをインストール](#agent-skill)
+[テーマをインストール](#theme-setup) · [AI スキルをインストール](#agent-skill) · [同梱内容を見る](#included-assets)
 
-プラム色の背景、ピンクの選択色、ミント色の炎を使ったデスクトップテーマです。Plasma のエフェクトや Kitty の配色を個別に使えます。手持ちの壁紙、カーソル、Codex ペットも取り込めます。
+深いプラム色にピンクの選択色とミント色の炎を合わせたデスクトップテーマです。キャラクター素材、アニメーションカーソル、壁紙、Codex ペット、Aura Symbols フォントと、KDE Plasma、Kitty、Orca、SDDM、GRUB、Plymouth のテーマを収録しています。
 
 ![Plasma のログイン直後に中央のミント色の炎が現れ、周囲の小さな炎が順に灯る](media/splash.gif)
 
@@ -43,11 +43,38 @@
 
 ファイル名や `--assets` の使い方は[素材パックの構成](assets.md)を参照してください。別のターミナルやデスクトップに配色を移すときは、[共通パレット](../resources/palette.json)の用途別の色と ANSI 16 色を、そのアプリのテーマ設定に対応させます。
 
+<a name="included-assets"></a>
+
+## 収録イラストとテーマ
+
+![Aura の壁紙 9 枚のプレビュー](media/wallpaper-gallery.jpg)
+
+[壁紙 9 枚を見る](../assets/character/wallpapers) · [キャラクター設定画とポートレート](../assets/character/art)
+
+| アニメーションカーソル | Codex ペット |
+| --- | --- |
+| <img src="media/aura-cursor.gif" width="360" alt="アニメーションカーソル"> | <img src="media/aura-pet.gif" width="264" alt="Codex ペット"> |
+| [アニメーションカーソル](../assets/cursors) | [Codex ペット](../assets/character/pet) |
+
+| SDDM | Aura Symbols |
+| --- | --- |
+| <img src="media/sddm-aura.jpg" width="400" alt="Aura SDDM ログイン画面"> | <img src="media/aura-symbols.png" width="380" alt="天秤、剣、キャラクターのシルエットのシンボル"> |
+| [Aura SDDM ログイン画面](../themes/sddm/aura-soulflame) | [AuraSymbols.otf](../themes/sddm/aura-soulflame/AuraSymbols.otf) |
+
+以下は Linux でカーソル、壁紙、ペットを導入する例です。必要なものを選んで実行してください。
+
+```sh
+python3 aura.py plan --assets assets/character --modules cursor wallpapers codex-pet
+python3 aura.py install --assets assets/character --modules cursor wallpapers codex-pet
+```
+
+Orca IDE、KDE のロック画面、Plasma のスタイルとアイコン、SDDM のログイン画面、GRUB と Plymouth の起動テーマにも対応しています。 [インストールと有効化のガイド](extended-themes.md)
+
 <a name="theme-setup"></a>
 
 ## インストールと適用
 
-以下のコマンドでリポジトリを取得するか、[テーマ一式の ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.1.0/aura-soulflame-v0.1.0.zip)をダウンロードして展開してください。
+以下のコマンドでリポジトリを取得するか、[テーマ一式の ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.0/aura-soulflame-v0.2.0.zip)をダウンロードして展開してください。
 
 ```sh
 git clone https://github.com/Bum-Boo/aura-soulflame.git

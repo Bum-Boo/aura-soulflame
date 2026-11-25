@@ -1,0 +1,5 @@
+[Icon Theme]
+Name=Aura SD - Scales of Obedience
+Name[ko]=아우라 SD · 복종의 저울
+Comment=An animated four-frame Aura SD pointer
+Inherits=breeze_cursors

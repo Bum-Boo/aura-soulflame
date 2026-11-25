@@ -1,0 +1,5 @@
+[Icon Theme]
+Name=Aura SD - Character
+Name[ko]=아우라 SD · 캐릭터만
+Comment=Animated character pointer and cursor states
+Inherits=breeze_cursors

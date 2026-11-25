@@ -1,0 +1,3 @@
+Cursor function glyphs adapted from KDE Breeze Cursors.
+KDE Breeze project · https://invent.kde.org/plasma/breeze
+The Aura SD character artwork is from the local Aura SD cursor character sheet.

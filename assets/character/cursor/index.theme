@@ -1,0 +1,5 @@
+[Icon Theme]
+Name=Aura SD - Poses
+Name[ko]=아우라 SD · 동작별 커서
+Comment=Character poses and props indicate cursor states
+Inherits=breeze_cursors

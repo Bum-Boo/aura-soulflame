@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Aura Soulflame
+Description=Aura · Scales of Obedience — mint soul flame boot splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/aura-soulflame
+ScriptFile=/usr/share/plymouth/themes/aura-soulflame/aura.script

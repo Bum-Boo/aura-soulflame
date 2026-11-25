@@ -1,0 +1,18 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "Mathis Paquet"
+      }
+    ],
+    "Category": "",
+    "Description": "Aura's cloak and soul flames across the Plasma workspace",
+    "EnabledByDefault": true,
+    "Id": "aura-soulflame",
+    "License": "LGPL",
+    "Name": "Aura · Soulflame",
+    "Version": "2.0",
+    "Website": "https://github.com/MathisP75/daemon-kde-mk2"
+  },
+  "X-Plasma-API": "5.0"
+}

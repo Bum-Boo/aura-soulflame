@@ -1,0 +1,94 @@
+# Aura Soulflame — Plymouth script theme
+Window.SetBackgroundTopColor(0.17, 0.13, 0.21);
+Window.SetBackgroundBottomColor(0.08, 0.06, 0.11);
+sw = Window.GetWidth();
+sh = Window.GetHeight();
+
+# --- 배경 (cover 스케일) ---
+bg_img = Image("background.png");
+if (bg_img) {
+  sx = sw / bg_img.GetWidth();
+  sy = sh / bg_img.GetHeight();
+  s = Math.Max(sx, sy);
+  bw = Math.Int(bg_img.GetWidth() * s);
+  bh = Math.Int(bg_img.GetHeight() * s);
+  bg = Sprite(bg_img.Scale(bw, bh));
+  bg.SetX(Math.Int((sw - bw) / 2));
+  bg.SetY(Math.Int((sh - bh) / 2));
+  bg.SetZ(-100);
+}
+
+# --- 소울플레임 애니메이션 ---
+for (i = 0; i < 36; i++) {
+  if (i < 10) name = "flame-0" + i + ".png";
+  else name = "flame-" + i + ".png";
+  flame[i] = Image(name);
+}
+fw = flame[0].GetWidth();
+fh = flame[0].GetHeight();
+flame_sprite = Sprite(flame[0]);
+flame_sprite.SetX(Math.Int(sw / 2 - fw / 2));
+flame_sprite.SetY(Math.Int(sh * 0.46 - fh / 2));
+flame_sprite.SetZ(10);
+
+title = Sprite(Image.Text("Scales of Obedience", 0.56, 0.91, 0.84, 1, "Serif 22"));
+title.SetX(Math.Int(sw / 2 - title.GetImage().GetWidth() / 2));
+title.SetY(Math.Int(sh * 0.46 + fh / 2 + 18));
+title.SetZ(10);
+
+tick = 0;
+fun refresh_callback() {
+  global.tick++;
+  idx = Math.Int(global.tick / 2) % 36;
+  flame_sprite.SetImage(flame[idx]);
+  a = Math.Min(1, global.tick / 40);
+  flame_sprite.SetOpacity(a);
+  title.SetOpacity(a);
+}
+Plymouth.SetRefreshFunction(refresh_callback);
+
+# --- 메시지 ---
+msg_sprite = Sprite();
+msg_sprite.SetZ(20);
+fun message_callback(text) {
+  img = Image.Text(text, 0.79, 0.70, 0.84, 1, "Sans 12");
+  msg_sprite.SetImage(img);
+  msg_sprite.SetX(Math.Int(sw / 2 - img.GetWidth() / 2));
+  msg_sprite.SetY(Math.Int(sh * 0.9));
+}
+Plymouth.SetMessageFunction(message_callback);
+
+# --- 비밀번호 입력 (디스크 암호화 시) ---
+entry_img = Image("entry.png");
+bullet_img = Image("bullet.png");
+entry_sprite = Sprite();
+prompt_sprite = Sprite();
+
+fun display_normal_callback() {
+  entry_sprite.SetOpacity(0);
+  prompt_sprite.SetOpacity(0);
+  for (i = 0; bullets[i]; i++) bullets[i].SetOpacity(0);
+}
+
+fun display_password_callback(prompt, count) {
+  ex = Math.Int(sw / 2 - entry_img.GetWidth() / 2);
+  ey = Math.Int(sh * 0.74);
+  entry_sprite.SetImage(entry_img);
+  entry_sprite.SetPosition(ex, ey, 30);
+  entry_sprite.SetOpacity(1);
+  pimg = Image.Text(prompt, 0.96, 0.43, 0.66, 1, "Sans 12");
+  prompt_sprite.SetImage(pimg);
+  prompt_sprite.SetPosition(Math.Int(sw / 2 - pimg.GetWidth() / 2), ey - 28, 30);
+  prompt_sprite.SetOpacity(1);
+  for (i = 0; bullets[i]; i++) bullets[i].SetOpacity(0);
+  for (i = 0; i < count && i < 24; i++) {
+    if (!bullets[i]) bullets[i] = Sprite(bullet_img);
+    bullets[i].SetPosition(ex + 14 + i * 12, ey + 14, 31);
+    bullets[i].SetOpacity(1);
+  }
+}
+Plymouth.SetDisplayNormalFunction(display_normal_callback);
+Plymouth.SetDisplayPasswordFunction(display_password_callback);
+
+fun quit_callback() { flame_sprite.SetOpacity(1); }
+Plymouth.SetQuitFunction(quit_callback);

@@ -1,0 +1,10 @@
+[SddmGreeterTheme]
+Name=Aura Soulflame
+Description=Aura · Scales of Obedience login theme
+Author=Bum-Boo
+Type=sddm-theme
+Version=1.0
+MainScript=Main.qml
+ConfigFile=theme.conf
+QtVersion=6
+Theme-API=2.0

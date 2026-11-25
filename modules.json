@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "modules": {
     "kitty": {
       "description": "Kitty color preset",
@@ -19,6 +19,24 @@
       "root": "data",
       "target": "color-schemes/AuraSoulflamePortable.colors",
       "source": "themes/plasma/AuraSoulflamePortable.colors"
+    },
+    "plasma-style": {
+      "description": "Aura Soulflame Plasma workspace chrome",
+      "platforms": [
+        "linux"
+      ],
+      "root": "data",
+      "target": "plasma/desktoptheme/aura-soulflame",
+      "source": "themes/plasma/styles/aura-soulflame"
+    },
+    "plasma-icons": {
+      "description": "Aura launcher, folders and Plasma status icons",
+      "platforms": [
+        "linux"
+      ],
+      "root": "data",
+      "target": "icons/AuraSoulflame",
+      "source": "themes/plasma/icons/AuraSoulflame"
     },
     "plasma-splash": {
       "description": "Plasma 6 animated login splash",

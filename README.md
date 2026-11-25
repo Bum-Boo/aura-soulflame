@@ -2,9 +2,9 @@
 
 **English** · [한국어](docs/README.ko.md) · [简体中文](docs/README.zh-CN.md) · [日本語](docs/README.ja.md)
 
-[Install the theme](#theme-setup) · [Install the AI skill](#agent-skill)
+[Install the theme](#theme-setup) · [Install the AI skill](#agent-skill) · [Browse the collection](#included-assets)
 
-A desktop theme built around plum backgrounds, pink selection, and mint flames. Pick individual Plasma effects or the Kitty palette, then bring your own wallpapers, cursors, or Codex pet if you want them.
+A desktop theme in plum, pink and mint. The full collection includes the character art, animated cursors, wallpapers, Codex pet, Aura Symbols, and native themes for KDE Plasma, Kitty, Orca, SDDM, GRUB and Plymouth.
 
 ![The Plasma login splash reveals a central mint flame and lights the smaller flames in sequence](docs/media/splash.gif)
 
@@ -43,11 +43,38 @@ To turn on the splash, choose **Aura Soulflame Splash** in System Settings → S
 
 See the [asset pack layout](docs/assets.md) for file names and `--assets` examples. For another terminal or desktop, map the roles and 16 ANSI colors in [palette.json](resources/palette.json) to its native theme format.
 
+<a name="included-assets"></a>
+
+## Included artwork and themes
+
+![Aura wallpaper gallery with nine designs](docs/media/wallpaper-gallery.jpg)
+
+[Download all nine wallpapers](assets/character/wallpapers) · [Character sheets and portraits](assets/character/art)
+
+| Animated Xcursor presets | Codex pet |
+| --- | --- |
+| <img src="docs/media/aura-cursor.gif" width="360" alt="Animated Xcursor presets"> | <img src="docs/media/aura-pet.gif" width="264" alt="Codex pet"> |
+| [Animated Xcursor presets](assets/cursors) | [Codex pet](assets/character/pet) |
+
+| SDDM | Aura Symbols |
+| --- | --- |
+| <img src="docs/media/sddm-aura.jpg" width="400" alt="Aura SDDM login screen"> | <img src="docs/media/aura-symbols.png" width="380" alt="Three Aura Symbols glyphs"> |
+| [Aura SDDM login screen](themes/sddm/aura-soulflame) | [AuraSymbols.otf](themes/sddm/aura-soulflame/AuraSymbols.otf) |
+
+Linux example for the included art. Select the modules your desktop supports.
+
+```sh
+python3 aura.py plan --assets assets/character --modules cursor wallpapers codex-pet
+python3 aura.py install --assets assets/character --modules cursor wallpapers codex-pet
+```
+
+Orca IDE, the KDE lock screen, Plasma style and icons, the SDDM login screen, and the GRUB and Plymouth boot themes each have their own steps. [See the full install and activation guide](docs/extended-themes.md)
+
 <a name="theme-setup"></a>
 
 ## Install and apply
 
-Clone the repository, or download the [full theme ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.1.0/aura-soulflame-v0.1.0.zip) and open the extracted folder.
+Clone the repository, or download the [full theme ZIP](https://github.com/Bum-Boo/aura-soulflame/releases/download/v0.2.0/aura-soulflame-v0.2.0.zip) and open the extracted folder.
 
 ```sh
 git clone https://github.com/Bum-Boo/aura-soulflame.git

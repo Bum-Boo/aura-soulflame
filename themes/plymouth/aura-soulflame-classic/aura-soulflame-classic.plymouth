@@ -1,0 +1,33 @@
+[Plymouth Theme]
+Name=Aura Soulflame Classic
+Description=SD Aura with mint soul flames
+ModuleName=two-step
+
+[two-step]
+ImageDir=/usr/share/plymouth/themes/aura-soulflame-classic
+Font=Sans 12
+TitleFont=Sans Light 28
+MonospaceFont=Monospace 12
+WatermarkHorizontalAlignment=.5
+WatermarkVerticalAlignment=.40
+HorizontalAlignment=.5
+VerticalAlignment=.80
+DialogHorizontalAlignment=.5
+DialogVerticalAlignment=.78
+BackgroundStartColor=0x9C246A
+BackgroundEndColor=0x30304C
+Transition=merge-fade
+TransitionDuration=0.22
+MessageBelowAnimation=true
+
+[boot-up]
+UseAnimation=true
+UseEndAnimation=false
+
+[shutdown]
+UseAnimation=false
+UseEndAnimation=false
+
+[reboot]
+UseAnimation=false
+UseEndAnimation=false
